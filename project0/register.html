@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+</head>
+<style>
+
+    body {
+        background-image: url("gray.png");
+    }
+
+</style>
+
+<body>
+
+    <div class="container">
+        <nav style="background-color: dimgray; padding:10px">
+            <a style="color: white;font-weight: bold" href="index.html">Homepage</a>
+         </nav>
+        <br />
+        <img src="logo.png" width="250" height="150" alt="logo" class="rounded-circle" />
+        <h2>Create a new account</h2>
+        <p style="background-color:lightcyan">If you already have an account please <a href="log-in.html">log in</a></p>
+                <form action="/action_page.php" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                        <div class="valid-feedback">Available username</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="e-mail">E-mail:</label>
+                        <input type="e-mail" class="form-control" id="uname" placeholder="Enter e-mail" name="uname" required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">
+                            The account was created by this e-mail before, please please log-in/div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Check this checkbox to continue.</div>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create a new account</button>
+                </form>
+</div>
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+    <div class="jumbotron text-center" style="margin-bottom:0; background-image:url(gray.png)">
+        <p>FirstWebsite | Adress: Fremont CA 75500 | <a href="">Privacy Policy</a> | <a href="">Sitemap</a></p>
+        <p>Follow us on: </p> <a href="twitter.com" style="padding: 20px; font-size:36px;"><i class="fab fa-twitter"></i></a> <a href=" " style="padding: 20px; font-size:36px;"><i class="fab fa-instagram"></i></a> <a href="" style="padding: 20px; font-size:36px;"><i class="fab fa-facebook"></i></a>
+    </div>
+</body>
+</html>

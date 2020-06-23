@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <title>About us</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial;
+        background-image:url(gray.png);
+    }
+
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+
+    .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    /* Create four equal columns that sits next to each other */
+    .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+</style>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <nav style="background-color: dimgray; padding:10px">
+                <a style="color: white;font-weight: bold; float:left" href="index.html">Homepage</a>
+                <img src="logo.png" width="250" height="150" alt="logo" class="rounded-circle" />
+            </nav>
+            <br />
+             <h1>Who we are?</h1>
+            <p>Our mission is spread influence to the world</p>
+        </div>
+
+        <!-- Photo Grid -->
+        <div class="row">
+            <div class="column">
+                <img src="backgr.png" style="width:100%">
+                <img src="backgr2.png" style="width:100%">
+                <img src="back.jpeg" style="width:100%">
+
+            </div>
+            <div class="column">
+                <img src="back.jpeg" style="width:100%">
+                <img src="backgr2.png" style="width:100%">
+                <img src="backgr.png" style="width:100%">
+
+            </div>
+            <div class="column">
+                <h1> We are a team of bllblalalalblalblabblka </h1>
+                <h3> we like to blblabalbalbalbalbalabla </h3>
+                <p> do wo wejcnkjdncjkndjcnj djcj kcdkc <br /> xjshjxjnsjxnjksnxjksnx</p>
+                <br /><br /><br /><br /> <br /><br /><br /><br /> <br /><br /><br /><br />
+                <h1> We are a team of bllblalalalblalblabblka </h1>
+                <h3> we like to blblabalbalbalbalbalabla </h3>
+                <p> do wo wejcnkjdncjkndjcnj djcj kcdkc <br /> xjshjxjnsjxnjksnxjksnx</p>
+            </div>
+        </div>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+            <p>FirstWebsite | Adress: Fremont CA 75500 | <a href="">Privacy Policy</a> | <a href="">Sitemap</a></p>
+            <p>Follow us on: </p> <a href="twitter.com" style="padding: 20px; font-size:36px;"><i class="fab fa-twitter"></i></a> <a href=" " style="padding: 20px; font-size:36px;"><i class="fab fa-instagram"></i></a> <a href="" style="padding: 20px; font-size:36px;"><i class="fab fa-facebook"></i></a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿.fakeimg {
+    height: 200px;
+    background-image: url("gray.png");
+}
+
+
+/* visited link */
+.mystyle a:visited {
+    color: green;
+}
+
+/* mouse over link */
+.mystyle a:hover {
+    color: mediumseagreen;
+}
+
+.mystyle {
+    color: indianred;
+}
+.jumbotron {
+    background-image: url("gray.png");
+}
+body {
+    background-image: url("gray.png"); 
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+    }
+input[type=submit] {
+    color:black;
+    padding: 12px;
+    width: 80px;
+    box-sizing: border-box;
+    float: right;
+    background-color: forestgreen;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%;
+    margin: auto;
+}
+.whyjoin {
+    background-image: url(back.jpeg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+#collapsibleNavbar {
+    color:yellow
+}
+.rounded-circle {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+a.button {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+}
+a.button:hover {
+    background-color: #3e8e41
+}
+a.button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
