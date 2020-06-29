@@ -1,0 +1,85 @@
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+    input[type=text]:focus {
+        border: 3px solid #555;
+    }
+input[type=submit] {
+    color:black;
+    padding: 12px;
+    width: 80px;
+    box-sizing: border-box;
+    float: right;
+    background-color: forestgreen;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 60%;
+    margin: auto;
+}
+.whyjoin {
+    background-image: url(back.jpeg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+#collapsibleNavbar {
+    color:yellow
+}
+
+.rating{
+position:absolute;
+top: %50;
+left: %50;
+transform: translate (-50%, -50%);
+transform: rotateY(180deg);
+display: flex;
+
+}
+.rating input{
+display: none;
+
+}
+
+.rating label{
+display:block;
+cursor: pointer;
+width: 30px;
+background: white;
+}
+.rating label:before{
+content:'\f005';
+font-family: fontAwesome;
+position: relative;
+display:block;
+font-size : 30px;
+color: #101010;
+}
+.rating label:after{
+content:'\f005';
+font-family: fontAwesome;
+position: absolute;
+display:block;
+font-size : 30px;
+color: yellow;
+top: 0;
+opacity: 0;
+transition: .5s;
+text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after
+{
+opacity: 1;
+}

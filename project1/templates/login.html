@@ -1,0 +1,45 @@
+
+{% extends "layout.html" %}
+
+{% block main %}
+
+        <img src="static/book.jpg" alt="book" width="150px" height="150px">
+        <h2>Log-in to your account</h2>
+        <p style="background-color:lightcyan">If you do not have an account please <a href= "{{ url_for('register') }}">register</a></p>
+        <form action="/login" method="post" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username or e-mail" name="username" required>
+                <div class="valid-feedback">Valid</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Log-in </button>
+        </form>
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+{% endblock %}

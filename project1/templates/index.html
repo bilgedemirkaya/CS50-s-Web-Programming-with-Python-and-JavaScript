@@ -1,0 +1,23 @@
+
+{% extends "layout.html" %}
+
+{% block main %}
+
+<img src="static/book.jpg" alt="book" width="304" height="236" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+</div>
+<div class="collapse navbar-collapse">
+</div>
+</nav>
+<div style="float:right"> <button type="button" class="btn btn-info">Frequently Asked Questions</button></div>
+<div class="jumbotron text-center" style="margin-bottom: 0">
+    <h1 style="color: #3b6066; font-weight:bold">Book's Review Website</h1>
+    <p style="font-style:italic;font-weight:bold;color: #3b6066">Look for reviews</p>
+</div>
+<em>Search by isbn,title or author:</em>
+<form class="example" action="{{ url_for('index') }}" method="post">
+  <input type="text" placeholder="Search books.." name="search">
+  <button type="submit" style="float:right; background: #5bc276; color:white;
+  border: 1px solid grey;width: 10%;padding:10px;"><i class="fa fa-search"></i></button>
+</form>
+
+{%endblock%}

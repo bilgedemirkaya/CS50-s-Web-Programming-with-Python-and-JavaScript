@@ -1,0 +1,35 @@
+
+{% extends "layout.html" %}
+
+{% block main %}
+
+<img src="static/book.jpg" alt="book" width="304" height="236" style="display: block; margin-left: auto; margin-right: auto; width: 30%;">
+</div>
+<div class="collapse navbar-collapse">
+</div>
+</nav>
+<div style="float:right"> <button type="button" class="btn btn-info">Frequently Asked Questions</button></div>
+<div class="jumbotron text-center" style="margin-bottom: 0">
+    <h1 style="color: #3b6066; font-weight:bold">Book's Review Website</h1>
+    <p style="font-style:italic;font-weight:bold;color: #3b6066">Look for reviews</p>
+</div>
+<hr color="#505050" style="width:100%; height:5px" />
+
+<table class="w3-table">
+    <tr>
+        <th scope="col">ISBN</th>
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Year</th>
+    </tr>
+
+{% for inf in info %}
+    <tr style=" border: 1px solid #dddddd;text-align: left;padding: 8px;">
+        <td> <a href="{{inf.isbn}}" style="color:white; background-color:gray;padding:5px;"> {{ inf.isbn }} </a> </td>
+        <td> <a href="/{{ inf.title }}" style="color: blue"> {{ inf.title }} </a> </td>
+        <td> <a href="{{inf.author}}" style="color: blue"> {{ inf.author }} </a> </td>
+        <td> {{ inf.year }} </td>
+    </tr>
+{% endfor %}
+</table>
+{%endblock%}

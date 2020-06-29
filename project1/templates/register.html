@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <div>
+ <img src="static/book.jpg"  alt="book" width="150px" height="150px">
+        <br />
+
+                <h2>Create a new account</h2>
+                <p style="background-color:lightcyan">If you already have an account please <a href="{{url_for('login')}}">log in</a></p>
+                <form action="{{ url_for('register') }}" method="post" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Enter username" name="username" required>
+                        <div class="valid-feedback">Available username</div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="e-mail" class="form-control" id="email" placeholder="Enter e-mail" name="email" required>
+                        <div class="valid-feedback">Valid</div>
+                        <div class="invalid-feedback">
+                            Enter a valid e-mail
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Confirm Password:</label>
+                            <input type="password" class="form-control" placeholder="Confirm password" name="pswd" required>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="form-group form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+                                <div class="valid-feedback">Valid.</div>
+                                <div class="invalid-feedback">Check this checkbox to continue.</div>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create a new account</button>
+                </form>
+</div>
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+{% endblock %}

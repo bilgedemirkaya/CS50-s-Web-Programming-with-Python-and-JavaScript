@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+        <title>Project 1 {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+
+       <div class="alert alert-info" role="alert" style="position: sticky; position: -webkit-sticky; top: 0 ;z-index: 1">
+                        <a class="close" href="index.html"> x </a>This website may use cookies</div>
+                    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                        <a class="navbar-brand" href="{{'/'}}">Homepage</a>
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'/'}}">Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'contact'}}">Contact</a>
+                            </li>
+
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'register'}}">Register</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style= "float:right" href="{{'login'}}">Log in</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{'logout'}}">Log out</a>
+                            </li></ul>
+
+
+                    </nav>
+
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <main class="container p-5">
+            {% block main %}{% endblock %}
+        </main>
+
+        <div class="jumbotron text-center" style="margin-bottom:0; background-image:url(gray.png)">
+        <p>FirstWebsite | Adress: Fremont CA 75500 | <a href="">Privacy Policy</a> | <a href="">Sitemap</a></p>
+        <p>Follow us on: </p> <a href="twitter.com" style="padding: 20px; font-size:36px;"><i class="fab fa-twitter"></i></a> <a href=" " style="padding: 20px; font-size:36px;"><i class="fab fa-instagram"></i></a> <a href="" style="padding: 20px; font-size:36px;"><i class="fab fa-facebook"></i></a>
+    </body>
+
+</html>
