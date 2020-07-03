@@ -1,0 +1,20 @@
+{% extends "tasks/layout.html" %}
+
+
+{% block body %}
+<h1> Tasks </h1>
+{% for task in tasks %}
+<ul>
+    <li>{{ task }}</li>
+    <br>
+    {% empty %}
+    <li>No Task.</li>
+    <br>
+</ul>
+
+{% endfor %}
+<!---- we could say  href="/tasks/add" but it would be hard every time we change to url name, go find every place that we mention /
+and change it. So we use the "name" of the url to reference it --->
+<a href="{% url 'add' %}"> Add a task</a>
+
+{% endblock %}
