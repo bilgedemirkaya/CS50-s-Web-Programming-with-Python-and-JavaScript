@@ -1,0 +1,57 @@
+            .nav-bar
+            {
+            background-color:#f5f5f5;
+            padding: 15px;
+            }
+            .nav-bar li{
+            float:right;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            overflow: hidden;
+            }
+            .nav-bar li a{
+            color:black;
+            font-size:20px;
+            }
+            .nav-bar li a:hover{
+            opacity:0.5;
+            }
+            .container{
+            margin-top:30px
+            }
+         #submit{
+         background-color:#5190f5;
+         color:white;
+         padding:10px;
+         }
+         #submit:hover{
+         opacity:0.9;
+         }
+         .labels {
+
+         width:180px;
+         clear:left;
+         text-align:right;
+         padding-right:10px;
+         float:left;
+         }
+         .form{
+         float:left;
+         width: 50%;
+         }
+         .sidebar{
+         float:right;
+         width: 50%;
+         }
+
+         .my-container
+         {
+         margin-left:100px;
+         margin-right:auto;
+         margin-top;50px;
+         width:1400px;
+         height:auto;
+         }
+
+

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styleadvanced.css" >
+        <title>Search</title>
+    </head>
+    <body>
+    <div>
+        <ul class="nav-bar">
+        <li style="margin-right:30px;"><a href="googlesearch.html">Google Search</a></li>
+        <div style="margin-left:30px;"> <img src="advanced-logo.JPG" alt="google" width="150px" height="60px"></div>
+        </ul>
+
+    </div>
+    <div class="my-container">
+        <h2 style="color:red">Advanced Search</h2>
+        <hr>
+        <div class="form">
+        <form action="https://google.com/search">
+            <p style="font-weight:bold;opacity:0.8;">Find pages with...</p>
+            <div>
+
+              <label class="labels">all this words:
+              </label> <input style="float:left;width:70%" type="text" name="as_q"></div>
+            <div>
+
+            <label class="labels"> this exact word or phrase: </label>
+                    <!-- <input style="float:left;width:50%" type="hidden"  name="as_q" value='"'> -->
+            <input style="float:left;width:70%" type="text" name="as_epq"></div>
+           <!-- <input style="float:left;width:50%" type="hidden"  name="as_q" value='"'> -->
+            <div>
+
+                <label class="labels" > any of these words: </label>
+             <!--     <input style="float:left;width:50%" type="hidden"  name="as_q" value="OR"> -->
+              <input style="float:left;width:70%" type="text" name="as_oq"></div>
+
+            <div>
+                    <label class="labels"> none of these words: </label>
+               <!--  <input style="float:left;width:50%" type="hidden"  name="as_q" value="-"> -->
+                <input style="float:left;width:70%" type="text" name="as_eq">
+            </div>
+            <div style="display:block;clear:both;float:right">
+
+                <br><br><br>
+                <input  style="width:150px;" id="submit" type="submit" value="Advanced Search"> </div>
+        </form>
+        </div>
+
+
+    <div class="sidebar">
+        <p style="font-weight:bold;opacity:0.8;"> To do this in the search bar: </p>
+         <p style="opacity:0.8;"> Type the important words: <span style="font-family:Book Antiqua"> tricolor rat terrier </span> </p>
+       <p style="opacity:0.8;"> Put exact words in quotes: <span style="font-family:Book Antiqua">"rat terrier" </span> </p>
+        <p style="opacity:0.8;"> Type OR between all the words you want: <span style="font-family:Book Antiqua"> miniature OR standard</span> </p>
+        <p style="opacity:0.8;">Put a minus sign just before the words you don't want: <span style="font-family:Book Antiqua"> -rodent, -"Jack Russel"</span></p>
+
+    </div>
+    </div>
+    <div class="jumbotron text-center" style="background-color:#f5f5f5;position:absolute;width:100%;bottom:0;height: 1.5rem;">
+                <p><a href="">Privacy Policy</a> | <a href="">Help</a></p>
+            </div>
+    </body>
+</html>
