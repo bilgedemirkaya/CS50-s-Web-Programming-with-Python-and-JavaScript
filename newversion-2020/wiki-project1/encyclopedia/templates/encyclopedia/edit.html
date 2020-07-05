@@ -1,0 +1,27 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+
+<div style="margin-left:80px;width:900px;">
+    <br>
+    <h1>Edit Page</h1>
+<div>
+    <form action="" method="post" >
+        {% csrf_token %}
+        <p style="font-weight:bold; color: red;"> Give a title: </p>
+    <input type="text" name="title" placeholder="title" value="{{ title }} " required>
+    <p style="font-weight:bold;"> Please write your content here: </p>
+<textarea style="width:70%;height:50%" name="content" rows="10" required> {{ content }} </textarea>
+    <br>
+        <div>
+            <br>
+          <button style="background-color:#179148;padding:10px;width:95px;float:right;" type="submit">Edit</button>
+        </div>
+    </form>
+</div>
+</div>
+{% endblock %}

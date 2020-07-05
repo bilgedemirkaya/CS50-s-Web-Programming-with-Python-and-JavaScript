@@ -1,0 +1,19 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia {{ title }}
+{% endblock %}
+{% block body %}
+<div style="margin-left:80px;width:900px;">
+
+  <h1 style="font-family:Sans-serif">  {{ title }} </h1>
+    <p style="opacity:0.7">From Wikipedia, the free encyclopedia </p>
+    <hr>
+
+    <ul>
+        {{ content }}
+    </ul>
+    <a href="{{title}}/edit"> <button style="background-color:#179148;padding:10px;width:95px;float:right;" type="submit">Edit Page</button> </a>
+</div>
+
+{% endblock %}
