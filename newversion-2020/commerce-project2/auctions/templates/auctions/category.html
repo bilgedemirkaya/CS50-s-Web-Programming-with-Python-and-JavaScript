@@ -1,0 +1,13 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div style="margin-bottom:80px;text-align:center;margin-top:80px;background-color:#5fbde8;padding:30px;color:white">
+    <h1> Categories </h1></div>
+<hr>
+<ul>
+{% for category in categories %}
+   <li> <a href="{% url 'categorysort' category %}"> {{ category }} </a></li>
+{% endfor %}
+</ul>
+{% endblock %}

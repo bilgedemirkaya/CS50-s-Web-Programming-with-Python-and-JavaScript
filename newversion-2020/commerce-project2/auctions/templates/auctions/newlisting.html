@@ -1,0 +1,71 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+{% block head %}
+<style>
+    label{
+         width:180px;
+         clear:left;
+         text-align:right;
+         padding-right:10px;
+         float:left;
+         margin-bottom:15px;
+         }
+          #submit{
+         background-color:#5190f5;
+         color:white;
+         padding:10px;
+         float:right;
+         }
+         #submit:hover{
+         opacity:0.9;
+         }
+         .divs{
+         margin-bottom:20px;
+         margin-top:10px;
+         }
+        .form{
+        float:left;
+         width: 60%;
+         }
+</style>
+{% endblock%}
+
+{% block body %}
+
+<div style="margin-left:100px;width:1400px">
+<form action="{% url 'newlisting' %}"   method="post" enctype="multipart/form-data" class="form">
+      {% csrf_token %}
+    <div class="divs">
+    <label for="title" >Title:</label>
+    <input  style="width:60%" type="text" name="title" required></div>
+    <div class="divs">
+    <label for="Description">Description:</label>
+        <textarea style="width:60%;" rows="5"  type="text" name="description" required></textarea>
+    </div>
+    <div class="divs">
+    <label for="Starting bid">Starting bid:</label>
+    <input style="width:60%" type="number" name="startingbid" required></div>
+    <div class="divs">
+    <label for="Category">Category:</label>
+    <select style="width:60%" type="category" name="category">
+    <option>Health</option>
+        <option>Home</option>
+        <option>Toys</option>
+        <option>Outdoor</option>
+        <option>Books</option>
+        <option>Fashion</option>
+    </select>
+    </div>
+    <div class="divs">
+    <label for="Image">Upload image:</label>
+        <input style="width:70%" type="file" name="image">
+   <label for="ImageUrl">Or Type URL: </label>
+    <input type="url" name="url"></div>
+    <div class="divs">
+    <button id="submit" type="submit">Upload</button></div>
+  </form>
+  {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+</div>
+{% endblock %}

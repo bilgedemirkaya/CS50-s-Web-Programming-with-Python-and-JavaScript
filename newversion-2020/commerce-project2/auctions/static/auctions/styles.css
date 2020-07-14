@@ -1,0 +1,12 @@
+body {
+    padding: 10px;
+    color:blue;
+    margin-right: 50px;
+    background-color:blue;
+}
+.coloumn-layout
+{
+    display:flex;
+    padding:50px;
+}
+

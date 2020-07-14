@@ -1,0 +1,49 @@
+{% extends "auctions/layout.html" %}
+{% block body %}
+<div style="margin-bottom:80px;text-align:center;margin-top:80px;background-color:red;padding:30px;color:white">
+    <h1> Sold for {{ currentprice }} $ to {{ winner | title }} </h1></div>
+<hr>
+<ul>
+    <div style="border:1px solid #ebeff5;display:flex;">
+        {% if listing.image %}
+        <div style="">
+            <img src=" {{ listing.image.url }}" alt="image" width="250px" style="margin-right:25px;margin-bottom:40px"></div>
+
+        {% elif listing.url %}
+        <div style="">
+                <img src="{{ listing.url }}" alt="image" width="250px" style="margin-right:25px;margin-bottom:40px"></div>
+        {% else %}
+        <div style="">
+                <img src="media/product-default.png" alt="image" width="250px" style="margin-right:25px;margin-bottom:40px"></div>
+        {% endif %}
+        <div style="margin-left:5%;display:table;clear:both">
+            <h1 style="">{{ listing.title |title }} </h1>
+         <h6>   <span style="color:#e85f6a"> Description : </span>  {{listing.description}} </h6>
+            <h6> <span style="color:#e85f6a"> Category : </span> {{ listing.category }} </h6>
+            <p>Listed by <a href="#"> {{listing.owner}}  </a></p>
+            <hr>
+            <div style="width:500px;">
+            <br>
+                <h4>Comment History: </h4>
+                {% if comments %}
+            {% for comment in comments %}
+            <h3 style="display:inline;">{{ comment.user | title}}</h3> <h6 style="display:inline;opacity:0.5;float:right"> {{ comment.comment_date }} </h6>
+               <p> {{ comment.comment }}</p>
+            {% endfor %}
+               {% else %}
+                   <p> No comment made </p>
+                {% endif %}
+</div>
+        </div>
+    </div>
+</ul>
+<div style="width:800px;margin-left:100px;">
+<div style="">
+<h4>Bid History:</h4>
+
+{% for bid in bids %}
+    <p style="display:inline;">{{ bid.user | title }} -----> </p> <p style="display:inline;font-weight:bold;"> {{ bid.bid }} </p> $
+    <p style="opacity:0.5;"> {{ bid.bid_date }} </p>
+{% endfor %}
+
+{% endblock %}

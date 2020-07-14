@@ -1,0 +1,36 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block body %}
+<div style="margin-bottom:80px;text-align:center;margin-top:80px;background-color:#5fbde8;padding:30px;color:white">
+    <h1> Active Listings </h1></div>
+<ul>
+{% for listing in listings %}
+    <div style="border:1px solid #ebeff5;display:flex;">
+        {% if listing.image %}
+        <div style="">
+            <img src=" {{ listing.image.url }}" alt="image" width="250px" style="margin-right:25px;margin-bottom:40px"></div>
+
+        {% elif listing.url %}
+        <div style="">
+                <img src="{{ listing.url }}" alt="image" width="250px" style="margin-right:25px;margin-bottom:40px"></div>
+        {% else %}
+        <div style="">
+                <img src="media/product-default.png" alt="image" width="250px" style="margin-right:25px;margin-bottom:40px"></div>
+        {% endif %}
+
+        <div style="margin-left:5%;display:table;clear:both">
+            <!-- this |title make first letter of each word capitalize -->
+            <h3 style="">{{ listing.title|title }}</h3>
+            <p style=""> {{listing.description}} </p>
+        <h4> Price: {{listing.startingbid}} $</h4>
+            <p>Listed by <a href="#"> {{listing.owner}}  </a></p>
+            <br><br><br>
+            <p> {{listing.listing_date}}</p>
+        <a href="{% url 'pagedetails' listing.title %}">See details.. </a>
+
+        </div>
+    </div>
+{% endfor %}
+</ul>
+{% endblock %}
