@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>SinglePage</title>
+        <script src="animate.js"></script>
+        <style>
+            @keyframes grow{
+            /* I spesify some keyframes for this particular element meaning where should animation start what should its styles properties be,
+            and the end what should its styles properties be. */
+            from {
+                font-size:20px;
+                background-color: sienna;
+                left:0%;
+            }
+            to{
+                font-size:100px;
+                color:rosybrown;
+                background-color: seashell;
+                left:50%;
+            }
+            }
+            h1{
+                position:relative; /* it position should be relative to other elements, **left thing wouldnt work without this */
+                animation-name: grow;
+                animation-duration: 5s;
+                animation-fill-mode: forwards;
+                animation-iteration-count: infinite;
+            }
+        </style>
+    </head>
+    <body>
+        <button>Click here</button>
+        <h1>Welcome </h1>
+    </body>
+</html>
