@@ -1,0 +1,22 @@
+textarea {
+    min-height: 400px;
+}
+.replybutton {
+    padding: 15px;
+    background-color: green;
+    margin-left:15px;
+    margin-top :200px;
+    float : right;
+}
+.archivebutton {
+    padding: 15px;
+    float : right;
+    margin-top: 200px;
+    background-color: red;
+}
+.emailsec {
+    color : black; 
+    padding: 15px;
+    margin-bottom: 10px;
+    display: block;
+}
