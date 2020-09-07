@@ -1,0 +1,28 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div class="container">
+  <h2 class="baslik" id="home"> Home </h2>
+  <div class="tweetsec">
+    <form action="#" >
+      <img src="{{ user.profile.image.url | default:'media/profile_image/egg.jpg'}}" alt ="pp" class="rounded-circle"><input type="text" class="twik" placeholder="What's Happening?">
+      <div id='buton'>
+        <a href="#"> <i class="far fa-image"></i></a> <a href="#"><i class="fas fa-poll"></i></a><a href="#"><i class="far fa-smile-beam"></i></a>
+         <button type="submit" class="tweekbutton" style="width:100px;float:right;margin:0;">Tweek</button>
+      </div>
+    </form>
+  </div>
+  <div class="posts">
+  {% for post in allposts %}
+  <div class="post">
+    <br>
+    <a href="#" ><img src="{{post.owner.image.url | default:'media/profile_image/egg.jpg'}}" class="rounded-circle"> </a> 
+    <h1 class="baslik" style="display: inline;"> {{ post.owner.firstname }} </h1>
+    <p class="username" style="display: inline;"> @{{ post.owner.user.username }}</p>  
+    <p class="posting"> {{ post.post }} </p>
+    <p class="username" style="float:right"> {{post.timestamp}} </p> 
+  </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

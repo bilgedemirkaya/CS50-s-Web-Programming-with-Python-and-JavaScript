@@ -1,0 +1,231 @@
+
+.nav-items {
+    font-size:large;
+    font-weight: bold;
+    letter-spacing:2px;
+    margin:20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.logo{
+    margin:30px;
+}
+.nav-items :hover{
+    font-weight:bold; 
+    color: #fc8200;
+    background-color: #f7d6b1;
+    border-radius: 25px;
+    border: 1px solid lightcyan;
+}
+.nav-link{
+    color:black;
+}
+
+.nav-link :active{
+    color: #e66b0e;
+}
+.baslik{
+    font-size: x-large;
+    font-weight:bold;
+    letter-spacing:1px;
+    text-shadow: 1px 0;
+    color:#000000;
+}
+.nav-item{
+    font-size: large;
+}
+.dropdown{
+    margin-top: 80px;
+    margin-left: 130px;
+}
+.tweekbutton{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    width: 220px;
+    padding: 15px;
+    border-radius: 55px;
+    background-color:  #ff6a00;
+    font-size: medium;
+    font-weight:bold;
+    color: white;
+    border:none;
+
+}
+#home{
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 1px rgba(173, 155, 155, 0.3);      
+    padding: 10px;
+    font-size: large;
+}
+
+#search {
+    border-radius: 25px;
+    text-align: center; 
+    font-size: medium;
+    background-color: rgb(230, 230, 230);
+    padding: 5px;
+    width: 80%;
+    margin-bottom: 15px;
+    margin-top:8px;
+    border:none;
+
+}
+.input-icons i { 
+    position: absolute; 
+} 
+  
+.input-icons { 
+    width: 100%; 
+    margin-bottom: 10px; 
+} 
+  
+.icon { 
+    padding: 20px; 
+    color: green; 
+    min-width: 50px; 
+    text-align: center; 
+    font-size: 1.2em;
+} 
+.profilebutton{
+    border-radius: 25px;
+    width:250px;
+    border: none;
+    outline: none;
+    background-color: white;
+    padding: 10px;
+}
+.dropdown button:hover{
+    background-color: rgb(248, 223, 223);
+}
+*:focus {
+    outline: 0 !important;
+}
+.username{
+    font-weight: lighter;
+    font-size:large;
+    opacity:0.8;
+    display: block;
+}
+
+.rounded-circle{
+width:50px;
+height:50px;
+margin-top: 8px;
+margin-right: 18px;
+float: left;
+}
+.pr{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+  /* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 275px;
+    bottom:50px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: medium;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+.show {display:block;}
+
+.fa-check{
+color: #ff6a00;
+}
+#trends{
+    background-color:rgba(236, 235, 235, 0.932); 
+    width:350px;
+}
+.form-control{
+    font-size: large;
+    height: 40px ;
+    margin-bottom: 8px;
+}
+.btn-primary{
+    font-size: large;
+    height: 40px;
+}
+.tweetsec{ 
+    border-radius: 1px;
+    box-shadow: 0px 0px 0px 1px rgba(173, 155, 155, 0.3);      
+}
+.twik{
+    border:none;
+    outline: none;
+    font-size:x-large;
+    opacity: 0.6;
+    padding: 10px;
+    
+}
+.fa-image, .fa-smile-beam, .fa-poll{
+    padding:10px;
+    font-size: 1.8em;
+    color:#ff6a00;
+    margin-bottom: 20px;
+}
+.fa-arrow-left{
+    color:#ff6a00;
+    margin-right: 25px;
+}
+.tweetsec, .post{
+    border: 1px solid rgb(240, 233, 233);
+}
+.posts{
+    display: block ;
+    border-top: 20px solid rgb(212, 212, 212);
+   
+}
+.posting {
+    font-size:medium;
+    margin:5px;
+    padding: 5px;;
+}
+.circle-prof{
+    border-radius: 100px;
+    width: 150px;
+    height: 150px;
+    border: none;
+    position: absolute;
+    z-index: 2;
+    top:150px;
+    left:40px;
+    border:5px solid white;
+}
+.backpc{
+    position: absolute;
+    z-index: 1;
+    height: 180px;
+    width: 530px;
+}
+
+.butonlar {
+border:none;
+outline: none;
+font-size:large;
+font-weight: bold;
+letter-spacing:2px;
+margin:10px;
+font-family: Arial, Helvetica, sans-serif;
+background-color: white;
+color: rgb(87, 85, 85);
+}
+.butonlar :hover{
+font-weight:bold; 
+color: #fc8200;
+background-color: #f7d6b1;
+}

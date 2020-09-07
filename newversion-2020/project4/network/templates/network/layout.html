@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %} Twikker {% endblock %}</title>
+        <link rel="icon" type="image/png" href="{% static 'network/favicon.ico' %}" sizes="32x32" class="rounded-circle"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'network/styles.css' %}?version=1" rel="stylesheet">
+        <script src="{% static 'network/myjs.js' %}?version=1" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+        
+    </head>
+    <body>
+            <div class="row">
+              <div class="" style="width: 400px;">
+                {% if user.is_authenticated %}
+                <ul class="nav flex-column" style="width:fit-content">
+                  <div style="margin-left: 120px;">
+                    <li class="logo"> 
+                       <a class="nav-link" href="{% url 'index' %}">  <img src="data:image/jpeg;base64,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" class="rounded-circle" alt="logo">
+                </a>
+                <br><br>
+              </li> 
+              
+                    <li class="nav-items"> 
+                        <a class="nav-link" href="{% url 'index' %}"> <i class="fas fa-house-damage"></i> Home</a>
+                    </li>
+                    <li class="nav-items">
+                        <a class="nav-link" href="#"> <i class="fa fa-hashtag" aria-hidden="true"></i> Following </a>
+                    </li>
+                    <li class="nav-items">
+                   
+                      <a class="nav-link" href="#"><i class="fas fa-bell"></i> Notifications</a>
+                    </li> 
+                    <li class="nav-items">
+                     
+                      <a class="nav-link" href="#"> <i class="fas fa-envelope"></i> Messages</a>
+                    </li>
+                    <li class="nav-items">
+                      <a class="nav-link" href="{% url 'profile' %}"> <i class="fas fa-user"></i> Profile</a>
+                    </li>     
+                  </div> 
+                  </ul> 
+                  {% else %}
+                  
+                    <a class="nav-link" href="{% url 'index' %}">  <img src="data:image/jpeg;base64,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" class="rounded-circle" alt="logo" style="margin: 50px">
+             </a>
+      
+                  {% endif %}
+                 {% if user.is_authenticated %}
+                  <div class="dropdown">
+                    {%if user.profile.image %}
+                    <button class="tweekbutton">Tweek</button>
+                  <button onclick="myFunction()" class="profilebutton" id="prbut"><img src="{{ user.profile.image.url | default:'network/media/profile_image/egg.jpg'}}" alt ="pp" class="rounded-circle" style="width:80px;height:80px;float:left;"><h3 class="pr">
+                      {{ name | title }} </h6> <p class ="username"> @{{user.username}} </p> </button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a class="profilebutton" style="width:275px;"><img src="{{ user.profile.image.url | default:'network/media/profile_image/egg.jpg'}}" alt ="pp" class="rounded-circle" style="width:60px;height:60px;float:left;"><h3 class="pr">
+                          {{ name | title }} <i class="fas fa-check"></i></h3>  <p class ="username"> @{{user.username}}</p> </a>
+                        <a href="#">Add an existing account</a>
+                        <a href="{% url 'logout' %}">Log out  @{{ user.username }} </a>
+                      
+                      </div>
+
+                      {% else %}
+                      <button onclick="myFunction()" class="profilebutton"><img src="media/profile_image/egg.jpg" alt ="pp" class="rounded-circle" style="float:left;">
+                        {{ name | title }} <p class ="username"> @{{user.username}} </p>
+                        </button>
+                        <div id="myDropdown" class="dropdown-content">
+                          <a class="profilebutton" style="width:250px;"><img src="media/profile_image/egg.jpg" alt ="pp" class="rounded-circle" style="width:40px;height:40px;float:left;"><h3 class="pr">
+                            {{ name | title }}   <i class="fas fa-check"></i></h6> <p class ="username"> @{{user.username}}</p> 
+                          <a href="#">Add an existing account</a>
+                          <a href="{% url 'logout' %}">Log out @{{ user.username }} </a>
+                        </div>
+                      {% endif %}
+                  </div>
+                  {% else %}
+                  <ul>
+                  <li class="nav-items">
+                    <a class="nav-link" href="{% url 'login' %}">Log In</a>
+                </li>
+                <li class="nav-items">
+                    <a class="nav-link" href="{% url 'register' %}">Register</a>
+                </li>
+                   </ul>
+              {% endif %}
+              </div>
+              <div class="col-sm">
+                {% block body %}
+                {% endblock %}
+              </div> 
+              {% if user.is_authenticated %}
+            <div class="col-sm thirdcol">
+              <form class="input-icons">
+                <i class="fa fa-search icon" aria-hidden="true"></i> <input id="search" type="search" placeholder="Search in Twikker" aria-label="Search">
+              </form>  
+              <div id="trends">
+              <h5 class="baslik"> Trends for you </h5>
+              <a href="#">yeeeeeeeeeeeeeeey</a>
+            </div>
+            {% else %}
+            <div style="display: block;">
+            <h1 class="baslik"> Welcome Twikker! </h1>
+            <h6> The Most Creative Unique Website that happens in 2020. </h6>
+            <img class= "rounded-circle" style="width:60%;height:60%; margin-top: 100px;margin-left: 110px;" src="media/profile_image/back.gif"> 
+           </div>
+            {% endif %}
+            </div>
+          </div>
+        </div> 
+</div>
+
+</html>

@@ -1,0 +1,31 @@
+{% extends "network/layout.html" %}
+
+{% block body %}
+<div class="container">
+  <h2 class="baslik" id="home"> <i class="fas fa-arrow-left"></i>{{ profile.firstname }}</h2>
+  <a href="#" ><img class="backpc" src="media/profile_image/minnos.jpg"></a> 
+  <a href="#" ><img src="{{profile.image.url | default:'network/media/profile_image/egg.jpg'}}" class="circle-prof"></a>
+  <div style ="margin-top:260px;"> <h1 class="baslik">{{ profile.firstname }} <img src= "{{'media/profile_image/tick.jpg'}}" width="50px" height="30px;"></h1> <p class="username">@{{user.username}}</p>
+  <p style="font-size: medium;">{{profile.description }}
+  </p>
+<h3> 0 following 10M followers </h3></div>
+
+<button id='userpost'class="butonlar"> Tweeks </button>
+<button id='likes'class="butonlar"> Likes </button>
+  <div class="posts" id="posts">
+  {% for post in userposts %}
+  <div class="post">
+    <br>
+    <a href="#" ><img src="{{post.owner.image.url | default:'network/media/profile_image/egg.jpg'}}" class="rounded-circle"> </a> 
+    <h1 class="baslik" style="display: inline;"> {{ post.owner.firstname }} </h1>
+    <p class="username" style="display: inline;"> @{{ post.owner.user.username }}</p>  
+    <p class="posting"> {{ post.post }} </p> <p class="username" style="float:right">{{post.timestamp}} </p>
+  </div>
+    {% endfor %}
+  </div>
+  <div class="likes" id="likes">
+    <br>
+     hsijdij mesela likladiklarim 
+  </div>
+</div>
+{% endblock %} 
